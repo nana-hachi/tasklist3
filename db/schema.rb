@@ -17,18 +17,8 @@ ActiveRecord::Schema.define(version: 2020_06_15_130653) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
-    t.bigint "user_id_id"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
-    t.index ["user_id_id"], name: "index_tasks_on_user_id_id"
-  end
-
-  create_table "user2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
