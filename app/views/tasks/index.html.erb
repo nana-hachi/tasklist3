@@ -3,8 +3,7 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.status %> &gt; <%= task.content %></li>
-
+  <%= link_to(task.id, task) %><li><%= task.status %> &gt; <%= task.content %></li>
 </ul>
 <% end %>
 <%= link_to '新規タスクの投稿', new_task_path %>
